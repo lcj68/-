@@ -1,4 +1,4 @@
-package com.lagou.edu.annotation;
+package com.lagou.edu.anno;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -8,14 +8,15 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+/**
+ * @Author l
+ * @desc
+ **/
 public class ClassUtil {
-
     /**
      * 取得某个接口下所有实现这个接口的类
      */
@@ -167,7 +168,6 @@ public class ClassUtil {
         // 如果存在 就获取包下的所有文件 包括目录
         File[] dirfiles = dir.listFiles(new FileFilter() {
             // 自定义过滤规则 如果可以循环(包含子目录) 或则是以.class结尾的文件(编译好的java类文件)
-            @Override
             public boolean accept(File file) {
                 return (recursive && file.isDirectory()) || (file.getName().endsWith(".class"));
             }

@@ -1,4 +1,4 @@
-package com.lagou.edu.annotation;
+package com.lagou.edu.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,11 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 自定义注解对象
- *
- * @author 孙一鸣 on 2020/2/28
- */
-@Target(ElementType.TYPE)
+ * @Author l
+ * @desc
+ **/
+@Target({ElementType.METHOD, ElementType.TYPE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExtService {
+public @interface MyAutowired {
 }

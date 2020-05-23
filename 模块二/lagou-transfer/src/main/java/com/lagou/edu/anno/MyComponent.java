@@ -1,4 +1,4 @@
-package com.lagou.edu.annotation;
+package com.lagou.edu.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,10 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 自定义注解对象
- *
+ * @author l
  */
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExtResource {
+public @interface MyComponent {
+
+    String value() default "";
 }
